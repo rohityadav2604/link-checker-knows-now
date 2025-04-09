@@ -21,6 +21,11 @@ const AboutEducation = () => {
             <div className="mb-1 pl-4">
               <span className="text-[hsl(var(--vscode-comment))]">Year: {edu.year}</span>
             </div>
+            {edu.location && (
+              <div className="mb-1 pl-4">
+                <span className="text-[hsl(var(--vscode-comment))]">Location: {edu.location}</span>
+              </div>
+            )}
           </div>
         ))}
       </div>
