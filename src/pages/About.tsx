@@ -64,9 +64,21 @@ const About = () => {
         </div>
         
         <div className="mb-8">
-          <h3 className="text-xl text-[hsl(var(--vscode-comment))] mb-4">// Operating System and other programs</h3>
+          <h3 className="text-xl text-[hsl(var(--vscode-comment))] mb-4">// Databases</h3>
           <div className="flex flex-wrap gap-4">
-            {skills.os.concat(skills.tools).map((skill, index) => (
+            {skills.databases.map((skill, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <input type="checkbox" checked className="h-4 w-4" readOnly />
+                <span className="text-lg">{skill.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <h3 className="text-xl text-[hsl(var(--vscode-comment))] mb-4">// Cloud and DevOps</h3>
+          <div className="flex flex-wrap gap-4">
+            {skills.cloudDevOps.map((skill, index) => (
               <div key={index} className="flex items-center gap-2">
                 <input type="checkbox" checked className="h-4 w-4" readOnly />
                 <span className="text-lg">{skill.name}</span>

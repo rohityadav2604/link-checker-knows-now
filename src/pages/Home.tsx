@@ -4,7 +4,7 @@ import portfolioConfig from '../data/portfolio-config.json';
 
 const Home = () => {
   const { name, title, greeting } = portfolioConfig.personalInfo;
-  const { email, phone, github, linkedin, behance } = portfolioConfig.contacts;
+  const { email, phone, github, linkedin, medium } = portfolioConfig.contacts;
   
   return (
     <div className="flex flex-col h-full justify-center items-center md:items-start px-4 md:px-20">
@@ -47,13 +47,13 @@ const Home = () => {
         </div>
         
         <div className="vscode-line mb-2">
-          <span className="vscode-comment">// you can also see my project on Behance</span>
+          <span className="vscode-comment">// you can also see my project on Medium</span>
         </div>
         <div className="vscode-line mb-4">
           <span className="vscode-keyword">const</span>
-          <span className="vscode-variable ml-2">behanceLink</span>
+          <span className="vscode-variable ml-2">mediumLink</span>
           <span className="ml-2">=</span>
-          <span className="vscode-string ml-2">"{behance}";</span>
+          <span className="vscode-string ml-2">"{medium}";</span>
         </div>
         
         <div className="vscode-line mb-2">
