@@ -24,6 +24,24 @@ const Navigation = () => {
       </NavLink>
       
       <NavLink 
+        to="/experience" 
+        className={({ isActive }) => 
+          `vscode-nav-item ${isActive ? 'vscode-nav-item-active' : ''}`
+        }
+      >
+        _experience
+      </NavLink>
+      
+      <NavLink 
+        to="/publications" 
+        className={({ isActive }) => 
+          `vscode-nav-item ${isActive ? 'vscode-nav-item-active' : ''}`
+        }
+      >
+        _publications
+      </NavLink>
+      
+      <NavLink 
         to="/projects" 
         className={({ isActive }) => 
           `vscode-nav-item ${isActive ? 'vscode-nav-item-active' : ''}`

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import portfolioConfig from '../data/portfolio-config.json';
-import { Folder, File, ChevronRight, Mail, Phone, Github, Linkedin, User, Code, FileCode } from 'lucide-react';
+import { Folder, File, ChevronRight, Mail, Phone, Github, Linkedin, User, Code, FileCode, Briefcase, BookOpen } from 'lucide-react';
 
 interface SidebarProps {
   addTab: (tabName: string) => void;
@@ -14,7 +14,9 @@ const Sidebar: React.FC<SidebarProps> = ({ addTab }) => {
     'personal-info': true,
     'projects': true,
     'contacts': true,
-    'education': false
+    'education': false,
+    'experience': false,
+    'publications': false
   });
 
   const toggleFolder = (folder: string) => {
@@ -93,6 +95,47 @@ const Sidebar: React.FC<SidebarProps> = ({ addTab }) => {
               </>
             )}
           </>
+        )}
+        
+        {/* Experience Section */}
+        <div 
+          className={`vscode-folder mt-4 ${expandedFolders['experience'] ? 'expanded' : ''}`}
+          onClick={() => toggleFolder('experience')}
+        >
+          <ChevronRight size={16} className="expand-icon" />
+          <Briefcase size={16} className="text-yellow-400 mr-1" />
+          <span>experience</span>
+        </div>
+        
+        {expandedFolders['experience'] && portfolioConfig.experience.map((job, index) => (
+          <div 
+            key={index}
+            className="vscode-file" 
+            onClick={() => handleFileClick(`/experience`, `${job.company.toLowerCase().replace(/\s+/g, '-')}.tsx`)}
+          >
+            <File size={16} className="text-yellow-300" />
+            <span>{job.company}</span>
+          </div>
+        ))}
+        
+        {/* Publications Section */}
+        <div 
+          className={`vscode-folder mt-4 ${expandedFolders['publications'] ? 'expanded' : ''}`}
+          onClick={() => toggleFolder('publications')}
+        >
+          <ChevronRight size={16} className="expand-icon" />
+          <BookOpen size={16} className="text-purple-400 mr-1" />
+          <span>publications</span>
+        </div>
+        
+        {expandedFolders['publications'] && (
+          <div 
+            className="vscode-file" 
+            onClick={() => handleFileClick(`/publications`, `technical-blogs.tsx`)}
+          >
+            <File size={16} className="text-purple-300" />
+            <span>technical-blogs</span>
+          </div>
         )}
         
         {/* Projects Section */}
