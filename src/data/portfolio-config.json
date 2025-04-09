@@ -1,0 +1,112 @@
+
+{
+  "personalInfo": {
+    "name": "Your Name",
+    "title": "Software Engineer",
+    "profileImage": "https://github.com/yourusername.png",
+    "greeting": "Hi all. I am",
+    "githubUsername": "yourusername"
+  },
+  "contacts": {
+    "email": "your.email@example.com",
+    "phone": "+1 234 567 8910",
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://linkedin.com/in/yourusername",
+    "behance": "https://www.behance.net/yourusername"
+  },
+  "bio": [
+    "Welcome to my portfolio.",
+    "I am a software engineer with expertise in full-stack development.",
+    "I am passionate about creating robust and scalable applications.",
+    "Currently working with React, TypeScript, Node.js, and modern web technologies."
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "institution": "University Name",
+      "year": "2018-2022"
+    },
+    {
+      "degree": "Certification",
+      "field": "Full Stack Development",
+      "institution": "DevelHope",
+      "year": "2023"
+    }
+  ],
+  "skills": {
+    "programmingLanguages": [
+      {"name": "JavaScript", "level": 90, "icon": "js"},
+      {"name": "TypeScript", "level": 85, "icon": "typescript"},
+      {"name": "HTML", "level": 95, "icon": "html"},
+      {"name": "CSS", "level": 90, "icon": "css"},
+      {"name": "SASS", "level": 85, "icon": "sass"}
+    ],
+    "frameworks": [
+      {"name": "React", "level": 90, "icon": "react"},
+      {"name": "Node.js", "level": 80, "icon": "node"},
+      {"name": "Vue.js", "level": 75, "icon": "vue"},
+      {"name": "Tailwind", "level": 85, "icon": "tailwind"}
+    ],
+    "tools": [
+      {"name": "Git", "level": 90, "icon": "git"},
+      {"name": "VS Code", "level": 95, "icon": "vscode"},
+      {"name": "Docker", "level": 80, "icon": "docker"},
+      {"name": "Figma", "level": 75, "icon": "figma"}
+    ],
+    "os": [
+      {"name": "Windows", "level": 95, "icon": "windows"},
+      {"name": "MacOS", "level": 90, "icon": "apple"},
+      {"name": "Linux", "level": 85, "icon": "linux"}
+    ]
+  },
+  "interests": [
+    "I'm very curious and have many interests beyond software development.",
+    "I'm passionate about blockchain technology and NFTs.",
+    "In the future, I'd like to develop projects on Ethereum and TON networks.",
+    "I'm a music enthusiast, particularly enjoying black culture, from rap to jazz and R&B.",
+    "I also enjoy watching TV series, with Mr. Robot being my favorite.",
+    "I'm a big fan of podcasts and created one with friends called 'Coding Stories'."
+  ],
+  "projects": [
+    {
+      "id": "justeat-clone",
+      "name": "JustEat Clone",
+      "folder": "_justEat-clone",
+      "description": "A food delivery platform clone with full ordering capabilities.",
+      "longDescription": "As the first project of my development course, I created a clone of the JustEat food delivery platform. This project showcases my skills in UI/UX design, front-end development, and responsive design principles.",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "images": ["public/lovable-uploads/0761b497-6feb-4eec-bd87-fb11b963d710.png", "public/lovable-uploads/bee716f7-256e-432a-87e8-5b0d0c1d8bf0.png"],
+      "githubUrl": "https://github.com/yourusername/justeat-clone",
+      "liveUrl": "https://justeat-clone.yourdomain.com",
+      "created": "5 months ago"
+    },
+    {
+      "id": "rtfkt-clone",
+      "name": "RTFKT Clone",
+      "folder": "_rtfkt-clone",
+      "description": "A clone of the RTFKT website with responsive design and animations.",
+      "longDescription": "For my second project, I replicated the RTFKT.com website. This project involved more complex CSS animations, responsive layouts for both desktop and mobile, and interactive elements.",
+      "technologies": ["HTML", "SCSS", "JavaScript"],
+      "tools": ["Jira"],
+      "images": ["public/lovable-uploads/ca16466c-9505-4e79-8826-adb24e700d02.png", "public/lovable-uploads/ec877b53-7f2a-4fe1-891c-32d161cc7b2c.png"],
+      "githubUrl": "https://github.com/yourusername/rtfkt-clone",
+      "liveUrl": "https://rtfkt-clone.yourdomain.com",
+      "created": "5 months ago",
+      "inProgress": true
+    },
+    {
+      "id": "alpha-spy",
+      "name": "Alpha Spy",
+      "folder": "_alpha-spy",
+      "description": "A Discord bot that shares messages between Discord servers.",
+      "longDescription": "Alpha Spy is a personal project different from previous ones. Working in a team, we created a Discord bot that shares messages between Discord servers. Being passionate about NFTs and blockchain, I found it challenging to stay updated on multiple projects. This bot allowed me to receive all news on a single server.",
+      "technologies": ["JavaScript", "Node.js"],
+      "tools": ["MongoDB", "Daki"],
+      "images": ["public/lovable-uploads/a894340f-d033-4052-8d6a-263c67549075.png"],
+      "githubUrl": "https://github.com/yourusername/alpha-spy",
+      "liveUrl": "https://alpha-spy.yourdomain.com",
+      "created": "5 months ago"
+    }
+  ]
+}

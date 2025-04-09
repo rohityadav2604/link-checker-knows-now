@@ -1,68 +1,21 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 222 47% 11%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 222 47% 11%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 222 47% 11%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 210 100% 50%; /* VS Code blue */
+    --primary-foreground: 210 40% 98%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -79,14 +32,26 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --radius: 0.5rem;
+
+    /* VS Code specific colors */
+    --vscode-bg: 224 35% 12%;
+    --vscode-sidebar-bg: 222 47% 11%;
+    --vscode-editor-bg: 225 27% 16%;
+    --vscode-editor-active-tab: 220 29% 20%;
+    --vscode-comment: 220 10% 50%;
+    --vscode-string: 150 100% 72%;
+    --vscode-keyword: 325 100% 72%;
+    --vscode-function: 39 100% 72%;
+    --vscode-variable: 220 100% 72%;
+    --vscode-comment-dark: 220 20% 40%;
+    --vscode-line-number: 220 30% 40%;
+    --vscode-selection-bg: 214 33% 25%;
+    --vscode-tab-inactive: 220 23% 18%;
+    --vscode-tab-active-border: 210 100% 50%;
+    --vscode-folder: 47 100% 65%;
+    --vscode-file: 210 40% 98%;
   }
 }
 
@@ -94,8 +59,144 @@
   * {
     @apply border-border;
   }
-
+  
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[hsl(var(--vscode-bg))] text-foreground font-mono;
+  }
+
+  code {
+    @apply font-mono;
+  }
+}
+
+@layer components {
+  .vscode-container {
+    @apply flex min-h-screen h-screen w-full overflow-hidden;
+  }
+  
+  .vscode-sidebar {
+    @apply bg-[hsl(var(--vscode-sidebar-bg))] border-r border-[hsl(var(--vscode-selection-bg))] flex-shrink-0 h-full w-64 overflow-y-auto;
+  }
+  
+  .vscode-explorer {
+    @apply p-2 text-sm;
+  }
+  
+  .vscode-folder {
+    @apply text-[hsl(var(--vscode-folder))] flex items-center gap-1 cursor-pointer hover:bg-[hsl(var(--vscode-selection-bg))] p-0.5 rounded;
+  }
+  
+  .vscode-file {
+    @apply text-[hsl(var(--vscode-file))] flex items-center gap-1 cursor-pointer hover:bg-[hsl(var(--vscode-selection-bg))] p-0.5 rounded ml-4;
+  }
+  
+  .vscode-header {
+    @apply bg-[hsl(var(--vscode-sidebar-bg))] border-b border-[hsl(var(--vscode-selection-bg))] flex-shrink-0 h-12 w-full flex items-center justify-between px-4;
+  }
+  
+  .vscode-main {
+    @apply flex flex-col flex-grow overflow-hidden;
+  }
+  
+  .vscode-tabs {
+    @apply bg-[hsl(var(--vscode-sidebar-bg))] border-b border-[hsl(var(--vscode-selection-bg))] flex-shrink-0 h-10 w-full flex items-center;
+  }
+  
+  .vscode-tab {
+    @apply bg-[hsl(var(--vscode-tab-inactive))] flex items-center h-full px-4 cursor-pointer relative text-muted-foreground;
+  }
+  
+  .vscode-tab-active {
+    @apply bg-[hsl(var(--vscode-editor-bg))] text-foreground;
+  }
+  
+  .vscode-tab-active::after {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-0.5 bg-[hsl(var(--vscode-tab-active-border))];
+  }
+  
+  .vscode-content {
+    @apply bg-[hsl(var(--vscode-editor-bg))] flex-grow p-4 overflow-auto;
+  }
+  
+  .vscode-footer {
+    @apply bg-[hsl(var(--vscode-sidebar-bg))] border-t border-[hsl(var(--vscode-selection-bg))] flex-shrink-0 h-7 w-full flex items-center justify-between px-4 text-xs;
+  }
+  
+  .vscode-syntax {
+    @apply font-mono;
+  }
+  
+  .vscode-comment {
+    @apply text-[hsl(var(--vscode-comment))];
+  }
+  
+  .vscode-keyword {
+    @apply text-[hsl(var(--vscode-keyword))];
+  }
+  
+  .vscode-string {
+    @apply text-[hsl(var(--vscode-string))];
+  }
+  
+  .vscode-function {
+    @apply text-[hsl(var(--vscode-function))];
+  }
+  
+  .vscode-variable {
+    @apply text-[hsl(var(--vscode-variable))];
+  }
+  
+  .vscode-nav {
+    @apply flex bg-[hsl(var(--vscode-sidebar-bg))] border-b border-[hsl(var(--vscode-selection-bg))];
+  }
+  
+  .vscode-nav-item {
+    @apply px-4 py-2 text-muted-foreground hover:text-foreground cursor-pointer transition-colors;
+  }
+  
+  .vscode-nav-item-active {
+    @apply border-b-2 border-[hsl(var(--primary))] text-foreground;
+  }
+  
+  .vscode-line {
+    @apply flex;
+  }
+  
+  .vscode-line-number {
+    @apply text-[hsl(var(--vscode-line-number))] w-8 flex-shrink-0 text-right pr-2;
+  }
+  
+  .vscode-social-link {
+    @apply hover:text-primary transition-colors px-1;
+  }
+  
+  .expand-icon {
+    @apply w-4 h-4 transition-transform;
+  }
+  
+  .expanded .expand-icon {
+    @apply rotate-90;
+  }
+  
+  /* Project styles */
+  .project-container {
+    @apply flex flex-col md:flex-row gap-4 my-6 p-4 rounded-md bg-[hsl(var(--vscode-selection-bg))];
+  }
+  
+  .project-images {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4 mt-4;
+  }
+  
+  .project-image {
+    @apply rounded-md overflow-hidden bg-[hsl(var(--vscode-sidebar-bg))] border border-[hsl(var(--vscode-selection-bg))];
+  }
+  
+  .project-tech-pill {
+    @apply px-2 py-1 rounded-full text-xs bg-[hsl(var(--vscode-selection-bg))] text-foreground inline-block mr-2 mb-2;
+  }
+  
+  .project-button {
+    @apply bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))/80] text-white px-4 py-2 rounded-md text-sm;
   }
 }
