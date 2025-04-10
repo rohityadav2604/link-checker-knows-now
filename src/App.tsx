@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -12,6 +11,7 @@ import AboutInterests from "./pages/AboutInterests";
 import AboutEducation from "./pages/AboutEducation";
 import Experience from "./pages/Experience";
 import Publications from "./pages/Publications";
+import OpenSource from "./pages/OpenSource";
 import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
 import Contact from "./pages/Contact";
@@ -39,6 +39,7 @@ const App = () => (
             
             <Route path="/experience" element={<Experience />} />
             <Route path="/publications" element={<Publications />} />
+            <Route path="/open-source" element={<OpenSource />} />
             
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:projectId" element={<ProjectDetail />} />

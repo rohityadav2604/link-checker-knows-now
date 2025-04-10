@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -39,6 +38,15 @@ const Navigation = () => {
         }
       >
         _publications
+      </NavLink>
+
+      <NavLink 
+        to="/open-source" 
+        className={({ isActive }) => 
+          `vscode-nav-item ${isActive ? 'vscode-nav-item-active' : ''}`
+        }
+      >
+        _open-source
       </NavLink>
       
       <NavLink 

@@ -1,4 +1,3 @@
-
 {
   "personalInfo": {
     "name": "Rohit Yadav",
@@ -208,6 +207,15 @@
       "publisher": "AWS Tip",
       "description": "Provided a step-by-step guide to setting up monitoring and observability tools, enabling real-time insights into system performance.",
       "url": "https://medium.com/p/a527c55d8abb"
+    }
+  ],
+  "openSource": [
+    {
+      "organization": "Organization Name",
+      "prLink": "https://github.com/org/repo/pull/123",
+      "date": "Month Year",
+      "description": "Brief description of your contribution and its impact",
+      "technologies": ["Technology1", "Technology2"]
     }
   ]
 }
