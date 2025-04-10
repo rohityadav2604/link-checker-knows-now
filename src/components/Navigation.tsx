@@ -3,11 +3,12 @@ import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
   return (
-    <nav className="vscode-nav">
+    <nav className="flex overflow-x-auto">
       <NavLink 
         to="/" 
         className={({ isActive }) => 
-          `vscode-nav-item ${isActive ? 'vscode-nav-item-active' : ''}`
+          `px-4 py-2 text-muted-foreground hover:text-foreground cursor-pointer transition-colors whitespace-nowrap
+          ${isActive ? 'border-b-2 border-[hsl(var(--primary))] text-foreground' : ''}`
         }
       >
         _hello
@@ -16,7 +17,8 @@ const Navigation = () => {
       <NavLink 
         to="/about" 
         className={({ isActive }) => 
-          `vscode-nav-item ${isActive ? 'vscode-nav-item-active' : ''}`
+          `px-4 py-2 text-muted-foreground hover:text-foreground cursor-pointer transition-colors whitespace-nowrap
+          ${isActive ? 'border-b-2 border-[hsl(var(--primary))] text-foreground' : ''}`
         }
       >
         _about-me
@@ -25,7 +27,8 @@ const Navigation = () => {
       <NavLink 
         to="/experience" 
         className={({ isActive }) => 
-          `vscode-nav-item ${isActive ? 'vscode-nav-item-active' : ''}`
+          `px-4 py-2 text-muted-foreground hover:text-foreground cursor-pointer transition-colors whitespace-nowrap
+          ${isActive ? 'border-b-2 border-[hsl(var(--primary))] text-foreground' : ''}`
         }
       >
         _experience
@@ -34,7 +37,8 @@ const Navigation = () => {
       <NavLink 
         to="/publications" 
         className={({ isActive }) => 
-          `vscode-nav-item ${isActive ? 'vscode-nav-item-active' : ''}`
+          `px-4 py-2 text-muted-foreground hover:text-foreground cursor-pointer transition-colors whitespace-nowrap
+          ${isActive ? 'border-b-2 border-[hsl(var(--primary))] text-foreground' : ''}`
         }
       >
         _publications
@@ -43,7 +47,8 @@ const Navigation = () => {
       <NavLink 
         to="/open-source" 
         className={({ isActive }) => 
-          `vscode-nav-item ${isActive ? 'vscode-nav-item-active' : ''}`
+          `px-4 py-2 text-muted-foreground hover:text-foreground cursor-pointer transition-colors whitespace-nowrap
+          ${isActive ? 'border-b-2 border-[hsl(var(--primary))] text-foreground' : ''}`
         }
       >
         _open-source
@@ -52,7 +57,8 @@ const Navigation = () => {
       <NavLink 
         to="/projects" 
         className={({ isActive }) => 
-          `vscode-nav-item ${isActive ? 'vscode-nav-item-active' : ''}`
+          `px-4 py-2 text-muted-foreground hover:text-foreground cursor-pointer transition-colors whitespace-nowrap
+          ${isActive ? 'border-b-2 border-[hsl(var(--primary))] text-foreground' : ''}`
         }
       >
         _projects
@@ -61,7 +67,8 @@ const Navigation = () => {
       <NavLink 
         to="/contact" 
         className={({ isActive }) => 
-          `vscode-nav-item ${isActive ? 'vscode-nav-item-active' : ''}`
+          `px-4 py-2 text-muted-foreground hover:text-foreground cursor-pointer transition-colors whitespace-nowrap
+          ${isActive ? 'border-b-2 border-[hsl(var(--primary))] text-foreground' : ''}`
         }
       >
         _contact-me

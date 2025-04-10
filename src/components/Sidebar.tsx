@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import portfolioConfig from '../data/portfolio-config.json';
-import { Folder, File, ChevronRight, Mail, Phone, Github, Linkedin, User, Code, FileCode, Briefcase, BookOpen } from 'lucide-react';
+import { Folder, File, ChevronRight, Mail, Phone, Github, Linkedin, User, Code, FileCode, Briefcase, BookOpen, GitPullRequest } from 'lucide-react';
 
 interface SidebarProps {
   addTab: (tabName: string) => void;
@@ -16,7 +15,8 @@ const Sidebar: React.FC<SidebarProps> = ({ addTab }) => {
     'contacts': true,
     'education': false,
     'experience': false,
-    'publications': false
+    'publications': false,
+    'open-source': false
   });
 
   const toggleFolder = (folder: string) => {
@@ -138,6 +138,26 @@ const Sidebar: React.FC<SidebarProps> = ({ addTab }) => {
           </div>
         )}
         
+        {/* Open Source Section */}
+        <div 
+          className={`vscode-folder mt-4 ${expandedFolders['open-source'] ? 'expanded' : ''}`}
+          onClick={() => toggleFolder('open-source')}
+        >
+          <ChevronRight size={16} className="expand-icon" />
+          <GitPullRequest size={16} className="text-blue-400 mr-1" />
+          <span>open-source</span>
+        </div>
+        
+        {expandedFolders['open-source'] && (
+          <div 
+            className="vscode-file" 
+            onClick={() => handleFileClick(`/open-source`, `contributions.tsx`)}
+          >
+            <File size={16} className="text-blue-300" />
+            <span>contributions</span>
+          </div>
+        )}
+        
         {/* Projects Section */}
         <div 
           className={`vscode-folder mt-4 ${expandedFolders['projects'] ? 'expanded' : ''}`}
@@ -170,13 +190,13 @@ const Sidebar: React.FC<SidebarProps> = ({ addTab }) => {
         
         {expandedFolders['contacts'] && (
           <>
-            <div className="vscode-file flex items-center">
-              <Mail size={16} className="text-green-400 mr-1" />
-              <span>{portfolioConfig.contacts.email}</span>
+            <div className="vscode-file">
+              <Mail size={16} className="text-green-400 mr-1 flex-shrink-0" />
+              <span className="text-xs overflow-hidden text-ellipsis">{portfolioConfig.contacts.email}</span>
             </div>
-            <div className="vscode-file flex items-center">
-              <Phone size={16} className="text-blue-400 mr-1" />
-              <span>{portfolioConfig.contacts.phone}</span>
+            <div className="vscode-file">
+              <Phone size={16} className="text-blue-400 mr-1 flex-shrink-0" />
+              <span className="text-xs overflow-hidden text-ellipsis">{portfolioConfig.contacts.phone}</span>
             </div>
           </>
         )}

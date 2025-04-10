@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -70,14 +69,6 @@
 }
 
 @layer components {
-  .vscode-container {
-    @apply flex min-h-screen h-screen w-full overflow-hidden;
-  }
-  
-  .vscode-sidebar {
-    @apply bg-[hsl(var(--vscode-sidebar-bg))] border-r border-[hsl(var(--vscode-selection-bg))] flex-shrink-0 h-full w-64 overflow-y-auto;
-  }
-  
   .vscode-explorer {
     @apply p-2 text-sm;
   }
@@ -88,39 +79,6 @@
   
   .vscode-file {
     @apply text-[hsl(var(--vscode-file))] flex items-center gap-1 cursor-pointer hover:bg-[hsl(var(--vscode-selection-bg))] p-0.5 rounded ml-4;
-  }
-  
-  .vscode-header {
-    @apply bg-[hsl(var(--vscode-sidebar-bg))] border-b border-[hsl(var(--vscode-selection-bg))] flex-shrink-0 h-12 w-full flex items-center justify-between px-4;
-  }
-  
-  .vscode-main {
-    @apply flex flex-col flex-grow overflow-hidden;
-  }
-  
-  .vscode-tabs {
-    @apply bg-[hsl(var(--vscode-sidebar-bg))] border-b border-[hsl(var(--vscode-selection-bg))] flex-shrink-0 h-10 w-full flex items-center;
-  }
-  
-  .vscode-tab {
-    @apply bg-[hsl(var(--vscode-tab-inactive))] flex items-center h-full px-4 cursor-pointer relative text-muted-foreground;
-  }
-  
-  .vscode-tab-active {
-    @apply bg-[hsl(var(--vscode-editor-bg))] text-foreground;
-  }
-  
-  .vscode-tab-active::after {
-    content: '';
-    @apply absolute top-0 left-0 w-full h-0.5 bg-[hsl(var(--vscode-tab-active-border))];
-  }
-  
-  .vscode-content {
-    @apply bg-[hsl(var(--vscode-editor-bg))] flex-grow p-4 overflow-auto;
-  }
-  
-  .vscode-footer {
-    @apply bg-[hsl(var(--vscode-sidebar-bg))] border-t border-[hsl(var(--vscode-selection-bg))] flex-shrink-0 h-7 w-full flex items-center justify-between px-4 text-xs;
   }
   
   .vscode-syntax {
@@ -147,12 +105,8 @@
     @apply text-[hsl(var(--vscode-variable))];
   }
   
-  .vscode-nav {
-    @apply flex bg-[hsl(var(--vscode-sidebar-bg))] border-b border-[hsl(var(--vscode-selection-bg))];
-  }
-  
   .vscode-nav-item {
-    @apply px-4 py-2 text-muted-foreground hover:text-foreground cursor-pointer transition-colors;
+    @apply px-4 py-2 text-muted-foreground hover:text-foreground cursor-pointer transition-colors whitespace-nowrap;
   }
   
   .vscode-nav-item-active {
