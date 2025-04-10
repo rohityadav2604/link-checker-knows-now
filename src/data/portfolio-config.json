@@ -5,14 +5,16 @@
     "title": "Software Engineer",
     "profileImage": "https://github.com/rizzle-rohit.png",
     "greeting": "Hi all. I am",
-    "githubUsername": "rizzle-rohit"
+    "githubUsername": "rizzle-rohit",
+    "twitterUsername": "rohityadav2604"
   },
   "contacts": {
     "email": "rohitsoftware2604@gmail.com",
     "phone": "+91 8510911060",
     "github": "https://github.com/rizzle-rohit/",
     "linkedin": "https://www.linkedin.com/in/rohityadav2604/",
-    "medium": "https://medium.com/@rohityadav2604/"
+    "medium": "https://medium.com/@rohityadav2604/",
+    "twitter": "https://twitter.com/rohityadav2604"
   },
   "bio": [
     "I am a Software Engineer with expertise in backend development and cloud infrastructure.",
