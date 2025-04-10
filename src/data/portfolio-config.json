@@ -211,11 +211,18 @@
   ],
   "openSource": [
     {
-      "organization": "Organization Name",
-      "prLink": "https://github.com/org/repo/pull/123",
-      "date": "Month Year",
-      "description": "Brief description of your contribution and its impact",
-      "technologies": ["Technology1", "Technology2"]
+      "organization": "Activist",
+      "prLink": "https://github.com/activist-org/activist/pull/1204",
+      "date": "April 2025",
+      "description": "Enhanced code readability and maintainability by refactoring complex functions and adding comments.",
+      "technologies": ["Python", "Django", "React", "TypeScript"]
+    },
+    {
+      "organization": "Activist",
+      "prLink": "https://github.com/activist-org/activist/pull/1202",
+      "date": "April 2025",
+      "description": "Improved Documentation of the backend project using numpy docstring format",
+      "technologies": ["Python", "Django", "React", "TypeScript"]
     }
   ]
 }
