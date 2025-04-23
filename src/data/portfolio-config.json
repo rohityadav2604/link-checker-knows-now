@@ -10,14 +10,14 @@
   "contacts": {
     "email": "rohitsoftware2604@gmail.com",
     "phone": "+91 8510911060",
-    "github": "https://github.com/rizzle-rohit/",
+    "github": "https://github.com/rohityadav2604/",
     "linkedin": "https://www.linkedin.com/in/rohityadav2604/",
     "medium": "https://medium.com/@rohityadav2604/",
     "twitter": "https://twitter.com/rohityadav2604"
   },
   "bio": [
     "I am a Software Engineer with expertise in backend development and cloud infrastructure.",
-    "Currently working at Rizzle and co-founding Timbr as Head of Technology.",
+    "Currently working at Rizzle and freelancing at Timbr as Head of Technology.",
     "I'm passionate about building scalable systems and optimizing performance.",
     "I frequently write technical articles about AWS, databases, and modern web technologies."
   ],
@@ -33,13 +33,12 @@
   "experience": [
     {
       "company": "Timbr",
-      "role": "Head of Technology",
+      "role": "Freelance",
       "period": "December 2024-Current",
       "description": [
-        "Co-founded a full-stack agency with friends, leading the tech side to bring client ideas to life.",
-        "Built the backend for Bluestar Fleet Management, a platform that optimizes corporate employee transportation by tracking rides, pricing, and safety.",
-        "Designed the cloud infrastructure with CI/CD pipelines, making development smoother and faster.",
-        "Took the initiative in architecture and design, ensuring scalable and well-structured solutions."
+        "Built the backend for bluestar fleet management using Python Django, MongoDB, a platform that optimizes corporate employee transportation by tracking rides, pricing, and safety, making travel safe and secure.",
+        "Reduced APIs latency by offloading heavy data work to MongoDB's aggregation pipeline.",
+        "Designed the cloud infrastructure with CI/CD pipelines, making development smoother and faster."
       ],
       "url": "https://www.timbr.design/"
     },
@@ -48,15 +47,14 @@
       "role": "Software Engineer",
       "period": "February 2022-Current",
       "description": [
-        "Reduced video creation time from 7 to 1 minute by optimising code leveraging ffmpeg which improved customer retention.",
-        "Enabled analytics for customers on their product usage by implementing analytics API over MongoDB using nodejs.",
+        "Architected a migration platform for medias with Go, processing over 500 GB of data daily, reducing API latency by 10ms.",
+        "Reduced video creation time on rizzle platform from 7 to 1 minute by optimising code leveraging ffmpeg which consequently had the positive impact on customer retention.",
+        "Collaborated closely with the DevOps team to streamline CI/CD pipelines for multiple Go-based Microservices for medias, cutting down deployment times by 35% while ensuring 99.9% uptime.",
+        "Enabled disaster recovery by implementing daily automated backups using Python scripts for production databases.",
+        "Implemented robust unit and integration testing for all Go-written modules, achieving a test coverage of over 80%.",
         "Developed and indexed GeoJSON data in Elasticsearch, significantly improving location search query performance.",
         "Automated deployment via a CI/CD pipeline for the machine learning team using AWS SageMaker, CodeBuild, and Jenkins.",
-        "Cut AWS costs by implementing S3 and ECR lifecycle policies and optimizing EC2 resources.",
-        "Improved scalability and fault tolerance by updating MongoDB cluster topology from 1 node to 3 node cluster.",
-        "Enabled disaster recovery by implementing daily automated backups of production databases and github repositories.",
-        "Improved system observability by instrumenting workloads with Prometheus and Grafana.",
-        "Automated video categorization for the marketing team using AWS Rekognition, Lambda, and Node.js."
+        "Cut AWS costs by implementing S3 and ECR lifecycle policies and optimizing EC2 resources."
       ],
       "url": "https://rizzle.com/"
     },
@@ -68,33 +66,34 @@
         "Taught introductory C++ and assisted in teaching algorithms and data structures to 500+ students over multiple batches.",
         "Built a real time code editor using firepad and ace editor api and firebase.",
         "Created interviewer-interviewee matching algorithm to connect to online users for mock interviews using websockets.",
-        "Developed a video call application using opensource tools and added features for video and audio control.",
-        "Developed forum for Nados coding Bootcamp's social network to enable discussion among students."
+        "Developed a video call application using opensource tools and subsequently added features of switch on/off for video and audio.",
+        "Developed forum for Nados coding Bootcamp's social network to enable discussion among students on the social network."
       ]
     }
   ],
   "skills": {
     "programmingLanguages": [
-      {"name": "JavaScript", "level": 95, "icon": "js"},
-      {"name": "TypeScript", "level": 90, "icon": "typescript"},
-      {"name": "C++", "level": 85, "icon": "cplusplus"},
-      {"name": "Golang", "level": 80, "icon": "go"},
-      {"name": "Python", "level": 75, "icon": "python"},
-      {"name": "SQL", "level": 90, "icon": "sql"}
+      {"name": "Golang", "level": 95, "icon": "go"},
+      {"name": "Python", "level": 90, "icon": "python"},
+      {"name": "TypeScript", "level": 85, "icon": "typescript"},
+      {"name": "JavaScript", "level": 85, "icon": "js"},
+      {"name": "C++", "level": 80, "icon": "cplusplus"},
+      {"name": "SQL", "level": 85, "icon": "sql"}
     ],
     "frameworks": [
-      {"name": "Node.js", "level": 95, "icon": "node"},
-      {"name": "Express", "level": 90, "icon": "express"},
+      {"name": "Node.js", "level": 90, "icon": "node"},
+      {"name": "Django", "level": 85, "icon": "django"},
       {"name": "React", "level": 85, "icon": "react"},
-      {"name": "Jenkins", "level": 80, "icon": "jenkins"},
+      {"name": "Express", "level": 85, "icon": "express"},
+      {"name": "ElasticSearch", "level": 85, "icon": "elasticsearch"},
+      {"name": "Apache Kafka", "level": 80, "icon": "kafka"},
       {"name": "Docker", "level": 90, "icon": "docker"},
       {"name": "Kubernetes", "level": 85, "icon": "kubernetes"}
     ],
     "databases": [
       {"name": "MongoDB", "level": 90, "icon": "mongodb"},
       {"name": "PostgreSQL", "level": 85, "icon": "postgresql"},
-      {"name": "MySQL", "level": 80, "icon": "mysql"},
-      {"name": "Elasticsearch", "level": 85, "icon": "elasticsearch"}
+      {"name": "MySQL", "level": 80, "icon": "mysql"}
     ],
     "cloudDevOps": [
       {"name": "AWS", "level": 90, "icon": "aws"},
@@ -111,6 +110,18 @@
   ],
   "projects": [
     {
+      "id": "github-battle-cards",
+      "name": "GitHub Battle Cards",
+      "folder": "_github-battle-cards",
+      "description": "A fun web app that generates trading cards from GitHub profiles, letting users compare stats and challenge friends.",
+      "longDescription": "GitHub Battle Cards is a fun web application that generates trading cards from GitHub profiles, allowing users to compare stats and challenge friends. Inspired by childhood WWE cards, it has reached 1000+ impressions organically.",
+      "technologies": ["JavaScript", "GitHub API", "Web Development"],
+      "images": ["public/lovable-uploads/0761b497-6feb-4eec-bd87-fb11b963d710.png"],
+      "githubUrl": "https://github.com/rohityadav2604/github-battle-cards",
+      "liveUrl": "https://github-battle-cards.vercel.app/",
+      "created": "2023"
+    },
+    {
       "id": "model-ai",
       "name": "Model AI",
       "folder": "_model-ai",
@@ -118,7 +129,7 @@
       "longDescription": "Model AI is a comprehensive platform designed to help users discover, compare, and implement AI models effortlessly. It provides real-time insights and clear comparisons, making it easier for users to find the right AI tools for their specific needs.",
       "technologies": ["JavaScript", "React", "Node.js", "AI APIs"],
       "images": ["public/lovable-uploads/0761b497-6feb-4eec-bd87-fb11b963d710.png"],
-      "githubUrl": "https://github.com/rizzle-rohit/model-ai",
+      "githubUrl": "https://github.com/rohityadav2604/ai-model-repository",
       "liveUrl": "https://modelai.vercel.app/",
       "created": "2023"
     },
@@ -130,7 +141,7 @@
       "longDescription": "Text PDF is an interactive tool that allows users to have conversations with their PDF documents. It makes understanding and extracting information from documents faster, easier, and more interactive, improving the overall document management experience.",
       "technologies": ["JavaScript", "AI", "PDF Processing", "NLP"],
       "images": ["public/lovable-uploads/bee716f7-256e-432a-87e8-5b0d0c1d8bf0.png"],
-      "githubUrl": "https://github.com/rizzle-rohit/text-pdf",
+      "githubUrl": "https://github.com/rohityadav2604/chatpdf-frontend",
       "liveUrl": "https://textpdf.vercel.app/",
       "created": "2023"
     },
@@ -154,20 +165,8 @@
       "longDescription": "Reunite is a web application built using Node.js, AWS Rekognition, and MongoDB that helps reconnect missing individuals with their families. It leverages AI-powered image recognition to match photos of missing persons with database records, making the reunification process faster and more accurate.",
       "technologies": ["Node.js", "AWS Rekognition", "MongoDB", "AI"],
       "images": ["public/lovable-uploads/ec877b53-7f2a-4fe1-891c-32d161cc7b2c.png"],
-      "githubUrl": "https://github.com/rizzle-rohit/reunite",
+      "githubUrl": "https://github.com/rohityadav2604/reunite",
       "liveUrl": "https://reunite-kn90.onrender.com/",
-      "created": "2022"
-    },
-    {
-      "id": "tinybite",
-      "name": "Tinybite",
-      "folder": "_tinybite",
-      "description": "Web app that summarizes articles and generates relevant images for faster information consumption.",
-      "longDescription": "Tinybite is a web application designed to summarize articles and generate relevant images, making information consumption faster and more engaging. It uses advanced natural language processing techniques to extract key points from text and pairs them with visually appealing images.",
-      "technologies": ["JavaScript", "NLP", "Image Generation", "Web APIs"],
-      "images": ["public/lovable-uploads/a894340f-d033-4052-8d6a-263c67549075.png"],
-      "githubUrl": "https://github.com/rizzle-rohit/tinybite",
-      "liveUrl": "",
       "created": "2022"
     },
     {
@@ -178,7 +177,7 @@
       "longDescription": "Pencil is an intuitive web application that enables users to sketch, create, and present their ideas visually. It provides a range of drawing tools and features that make digital sketching accessible and enjoyable for users of all skill levels.",
       "technologies": ["HTML5 Canvas", "JavaScript", "CSS"],
       "images": ["public/lovable-uploads/0761b497-6feb-4eec-bd87-fb11b963d710.png"],
-      "githubUrl": "https://github.com/rizzle-rohit/pencil",
+      "githubUrl": "https://github.com/rohityadav2604/white-board",
       "liveUrl": "https://white-board-one.netlify.app",
       "created": "2021"
     }

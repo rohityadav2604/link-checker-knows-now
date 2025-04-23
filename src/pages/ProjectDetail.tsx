@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import portfolioConfig from '../data/portfolio-config.json';
@@ -86,7 +85,7 @@ const ProjectDetail = () => {
             </div>
           </div>
           
-          <div className="mt-6">
+          <div className="mt-6 flex flex-col md:flex-row gap-3">
             <a 
               href={project.githubUrl} 
               target="_blank" 
@@ -96,6 +95,17 @@ const ProjectDetail = () => {
               <Github size={16} className="mr-2" />
               view-project-on-github
             </a>
+            {project.liveUrl && (
+              <a 
+                href={project.liveUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="project-button flex items-center justify-center w-full md:w-auto"
+              >
+                <ExternalLink size={16} className="mr-2" />
+                view-live-project
+              </a>
+            )}
           </div>
         </div>
         
